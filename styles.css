@@ -175,9 +175,9 @@ a {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 200;
-  padding: 0.5rem;
+  padding: 0.5rem 0.4rem 0.5rem 0.5rem;
   background-color: rgb(2, 133, 85);
-  width: 100%;
+  width: 99%;
 }
 
 .locations p {
@@ -312,6 +312,9 @@ a {
 
   .locations p {
     padding: 1rem;
+  }
+  .locations h2{
+    width: 96%;
   }
 
   .footer-links {
