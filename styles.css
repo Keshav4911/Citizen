@@ -1,0 +1,355 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .logo {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.header .header-img {
+  width: 100%;
+  height: auto;
+  max-height: 35rem;
+}
+
+.header .header-img img {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(2, 133, 85);
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: rgb(2, 133, 85);
+}
+
+.hero p {
+  color: rgb(117, 116, 116);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.hero .button-div {
+  display: flex;
+  align-self: center;
+  padding: 0.4rem 0.7rem;
+  background-color: rgb(233, 114, 0);
+  width: fit-content;
+  margin: 2rem;
+}
+
+.hero .button-div .button {
+  font-size: 1.5rem;
+  font-family: "Sora", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: rgb(2, 133, 85);
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: rgb(2, 133, 85);
+}
+
+.advantages-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.advantage-item {
+  width: 45%;
+  margin-bottom: 2rem;
+}
+
+.advantage-item h3 {
+  text-align: left;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: rgb(2, 133, 85);
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.advantage-item p {
+  color: rgb(117, 116, 116);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.7rem;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations h2 {
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 200;
+  padding: 0.5rem;
+  background-color: rgb(2, 133, 85);
+  width: 100%;
+}
+
+.locations p {
+  color: rgb(117, 116, 116);
+  background-color: rgba(2, 133, 85, 0.1);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.7rem;
+  padding: 2rem 4rem;
+}
+
+.testimonials {
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 45%;
+  margin: 0.5rem 0;
+}
+
+.testimonial img {
+  align-self: center;
+  width: 15rem;
+}
+
+.testimonial blockquote {
+  color: rgb(117, 116, 116);
+  font-style: italic;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 2rem 4rem;
+}
+
+.testimonial cite {
+  align-self: center;
+  color: rgb(2, 133, 85);
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 0 4rem;
+  width: 50%;
+}
+
+.full-width-line {
+  height: 1px;
+  background-color: rgb(2, 133, 85);
+}
+
+.footer .footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer .footer-text p {
+  font-size: 0.8rem;
+  text-align: left;
+  color: rgb(117, 116, 116);
+  line-height: 1rem;
+}
+
+.footer .footer-text .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  color: black;
+  padding: 1rem 0;
+}
+
+.footer .footer-text .footer-links a {
+  padding: 0.5rem;
+  color: black;
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1.7rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .header .logo {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .advantages-grid {
+    flex-direction: column;
+  }
+
+  .advantage-item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 100%;
+  }
+
+  .testimonial blockquote {
+    padding: 1rem;
+  }
+
+  .locations p {
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .button-div {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .hero .button-div .button {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .locations h2 {
+    font-size: 1.4rem;
+  }
+
+  .testimonial img {
+    width: 10rem;
+  }
+
+  .testimonial blockquote {
+    padding: 1rem 0;
+  }
+
+  .testimonial cite {
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero h1::after,
+  .advantages h2::after {
+    width: 40px;
+  }
+}

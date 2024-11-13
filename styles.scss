@@ -1,0 +1,257 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+}
+
+$primary-color: rgb(2,133,85);
+$primary-translucent-color: rgba(2,133,85,0.1);
+$text-color: rgb(117,116,116);
+$white-color: rgb(255,255,255);
+$button-color: rgb(233,114,0);
+$font-family: "Sora", sans-serif;
+
+body {
+  font-family: $font-family;
+}
+
+a {
+	text-decoration: none;
+	color: $white-color;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+
+	.logo {
+		margin-top: 2rem;
+		padding: 2rem;
+	}
+
+	.header-img {
+		width: 100%;
+		height: 35rem;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2rem 0 2rem;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: $primary-color;
+		font-family: $font-family;
+  		font-optical-sizing: auto;
+		font-style: normals;
+		font-weight: 300;
+	}
+
+	p {
+		color: $text-color;
+		font-size: 1rem;
+		text-align: left;
+	}
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
+	 .button-div {
+		display: flex;
+		align-self: center;
+		padding: 0.4rem 0.7rem;
+		background-color: $button-color;
+		width: fit-content;
+		margin: 2rem;
+
+		.button {
+			font-size: 1.5rem;
+			font-family: $font-family;
+			font-style: normal;
+			font-weight: 300;
+		}
+	}
+}
+
+.advantages {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 2rem 2rem 2rem;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	h2 { 
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: $primary-color;
+		font-family: $font-family;
+  		font-optical-sizing: auto;
+		font-style: normals;
+		font-weight: 300;
+	}
+
+	.advantages-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		h3 {
+			text-align: left;
+			font-size: 1.7rem;
+			margin-bottom: 1rem;
+			color: $primary-color;
+			font-family: $font-family;
+			font-optical-sizing: auto;
+			font-style: normals;
+			font-weight: 300;
+		}
+
+		p {
+			color: $text-color;
+			font-size: 1rem;
+			text-align: left;
+			line-height: 1.7rem;
+		}
+
+		.advantage-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 45%;
+			margin: 0.5rem 0;
+		}
+	}
+}
+
+.locations {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	h2 { 
+		font-size: 1.7rem;
+		color: $white-color;
+		font-family: $font-family;
+  		font-optical-sizing: auto;
+		font-style: normals;
+		font-weight: 200;
+		padding: 0.5rem;
+		background-color: $primary-color;
+	}
+
+	p {
+		color: $text-color;
+		background-color: $primary-translucent-color;
+		font-size: 1rem;
+		text-align: left;
+		line-height: 1.7rem;
+		padding: 2rem 4rem;
+	}
+
+}
+
+.testimonials {
+	display: flex;
+	padding: 2rem;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	.testimonials-grid {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		.testimonial {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 45%;
+			margin: 0.5rem 0;
+
+			img {
+				align-self: center;
+				width: 15rem;
+			}
+
+			blockquote {
+				color: $text-color;
+				font-style: italic;
+				font-family: $font-family;
+				font-size: 1rem;
+				text-align: center;
+				line-height: 1.7rem;
+				padding: 2rem 4rem;
+			}
+
+			cite {
+				align-self: center;
+				color: $primary-color;
+				font-family: $font-family;
+				font-size: 1rem;
+				text-align: center;
+				line-height: 1.7rem;
+				padding: 0 4rem;
+				width: 50%
+			}
+		}
+	}
+}
+
+.full-width-line {
+	height: 1px;
+	background-color: $primary-color;
+}
+
+.footer {
+	.footer-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem;
+
+		p {
+			font-size: 0.8rem;
+			text-align: left;
+			color: $text-color;
+			line-height: 1.0rem;
+		}
+		.footer-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: fit-content;
+			color: black;
+			padding: 1rem 0;
+
+			a {
+				padding: 0.5rem;
+				color: black;
+				font-size: 0.8rem;
+				text-align: left;
+				line-height: 1.7rem;
+			}
+		}
+	}
+}
