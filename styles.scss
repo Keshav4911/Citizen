@@ -1,294 +1,405 @@
-/** @format */
+// Importing Google Fonts - using variable weights for flexibility
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 
-/* Sora font with variable weight - works great for both headings and body */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
-
-/* Clean slate - browser resets */
+// Resetting default styling for consistency across browsers
 * {
-	margin: 0;
-	padding: 0;
-	text-indent: 0;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
 }
 
-/* Brand colors and common values - easier to maintain and update */
-$primary-color: rgb(2,133,85);  // Citizens signature green
-$primary-translucent-color: rgba(2,133,85,0.1);  // For subtle backgrounds
-$text-color: rgb(117,116,116);  // Readable gray that's not too harsh
-$white-color: rgb(255,255,255);
-$button-color: rgb(233,114,0);  // Orange CTA - stands out nicely against green
-$font-family: "Sora", sans-serif;  // Using throughout for consistency
-
-/* Base styles */
+// Setting base font for the document - clean, modern, and sans-serif
 body {
-  font-family: $font-family;
+  font-family: "Sora", sans-serif;
 }
 
-/* Clean link styling - no underlines */
+// Link styling - remove default underline and set color to white
 a {
-	text-decoration: none;
-	color: $white-color;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
-/* Header section with nested elements */
+// Header styling
 .header {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	// Logo needs breathing room
-	.logo {
-		margin-top: 2rem;
-		padding: 2rem;
-	}
+  // Logo - adds top margin and padding for spacing
+  .logo {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
 
-	// Banner image container
-	.header-img {
-		width: 100%;
-		height: 35rem;  // Fixed height for consistency
+  // Header image - responsive sizing and max height
+  .header-img {
+    width: 100%;
+    height: auto;
+    max-height: 35rem;
 
-		img {
-			width: 100%;
-		}
-	}
+    // Images should take full width inside the header
+    img {
+      width: 100%;
+    }
+  }
 }
 
-/* Hero section - main pitch area */
+// Hero section - center and align content nicely
 .hero {
-	display: flex;
-	flex-direction: column;
-	padding: 2rem 2rem 0 2rem;  // No bottom padding since button has margin
-	text-align: center;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-	// Main heading
-	h1 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		color: $primary-color;
-		font-family: $font-family;
-  		font-optical-sizing: auto;
-		font-style: normals;
-		font-weight: 300;  // Light weight looks more modern
-	}
+  // Main heading - green color with underline effect
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(2, 133, 85);
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 1rem;
 
-	// Body copy
-	p {
-		color: $text-color;
-		font-size: 1rem;
-		text-align: left;  // Left-aligned for better readability
-	}
+    // Underline effect
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: rgb(2, 133, 85);
+    }
+  }
 
-	// Content wrapper
-	.hero-content {
-		display: flex;
-		flex-direction: column;
-		height: fit-content;
-	}
+  // Body text - subtle gray color for readability
+  p {
+    color: rgb(117, 116, 116);
+    font-size: 1rem;
+    text-align: left;
+  }
 
-	// CTA button container
-	.button-div {
-		display: flex;
-		align-self: center;
-		padding: 0.4rem 0.7rem;
-		background-color: $button-color;
-		width: fit-content;
-		margin: 2rem;
+  // Wrapper for hero content
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
 
-		// Button text
-		.button {
-			font-size: 1.5rem;
-			font-family: $font-family;
-			font-style: normal;
-			font-weight: 300;
-		}
-	}
+  // Call-to-action button - styled with orange background
+  .button-div {
+    display: flex;
+    align-self: center;
+    padding: 0.4rem 0.7rem;
+    background-color: rgb(233, 114, 0);
+    width: fit-content;
+    margin: 2rem;
+
+    // Button text styling
+    .button {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
 }
 
-/* Advantages section - 4-column grid layout */
+// Advantages section - follows a similar layout as hero
 .advantages {
-	display: flex;
-	flex-direction: column;
-	padding: 1rem 2rem 2rem 2rem;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-	// Section heading
-	h2 { 
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		color: $primary-color;
-		font-family: $font-family;
-  		font-optical-sizing: auto;
-		font-style: normals;
-		font-weight: 300;
-	}
+  // Heading - styled with green color and underline
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: rgb(2, 133, 85);
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 1rem;
 
-	// Grid container for advantage boxes
-	.advantages-grid {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-around;
+    // Same underline effect as in hero
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: rgb(2, 133, 85);
+    }
+  }
 
-		// Box headings
-		h3 {
-			text-align: left;
-			font-size: 1.7rem;
-			margin-bottom: 1rem;
-			color: $primary-color;
-			font-family: $font-family;
-			font-optical-sizing: auto;
-			font-style: normals;
-			font-weight: 300;
-		}
+  // Grid for advantage boxes - adjusts for smaller screens
+  .advantages-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
 
-		// Box content
-		p {
-			color: $text-color;
-			font-size: 1rem;
-			text-align: left;
-			line-height: 1.7rem;  // Better readability for longer text
-		}
+    // Vertical divider in grid
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 35%;
+      width: 2px;
+      background-color: rgb(229, 229, 229);
+      transform: translateX(-50%);
+    }
+    &::before {
+      transform: translateY(20%);
+    }
+    &::after {
+      transform: translateY(160%);
+    }
+  }
 
-		// Individual advantage box
-		.advantage-item {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			max-width: 45%;  // Two columns with some spacing
-			margin: 0.5rem 0;
-		}
-	}
+  // Individual advantage item styling
+  .advantage-item {
+    width: 45%;
+    margin-bottom: 2rem;
+
+    // Heading inside advantage item
+    h3 {
+      text-align: left;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: rgb(2, 133, 85);
+      font-weight: 300;
+    }
+
+    // Content inside advantage item
+    p {
+      color: rgb(117, 116, 116);
+      font-size: 1rem;
+      text-align: left;
+      line-height: 1.7rem;
+    }
+  }
 }
 
-/* Locations section - different style treatment */
+// Locations section - a full-width green banner
 .locations {
-	display: flex;
-	flex-direction: column;
-	padding: 2rem;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-	// Green banner heading
-	h2 { 
-		font-size: 1.7rem;
-		color: $white-color;
-		font-family: $font-family;
-  		font-optical-sizing: auto;
-		font-style: normals;
-		font-weight: 200;  // Extra light weight for banner text
-		padding: 0.5rem;
-		background-color: $primary-color;
-	}
+  // Green heading banner
+  h2 {
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    padding: 0.5rem;
+    background-color: rgb(2, 133, 85);
+  }
 
-	// Location details with subtle background
-	p {
-		color: $text-color;
-		background-color: $primary-translucent-color;
-		font-size: 1rem;
-		text-align: left;
-		line-height: 1.7rem;
-		padding: 2rem 4rem;  // Generous padding for emphasis
-	}
+  // Paragraph with light green background for contrast
+  p {
+    color: rgb(117, 116, 116);
+    background-color: rgba(2, 133, 85, 0.1);
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7rem;
+    padding: 2rem 4rem;
+  }
 }
 
-/* Testimonials section - social proof */
+// Testimonials section - arranged in a grid
 .testimonials {
-	display: flex;
-	padding: 2rem;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-	// Grid for testimonial cards
-	.testimonials-grid {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
+  // Grid layout for testimonials
+  .testimonials-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-		// Individual testimonial card
-		.testimonial {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			max-width: 45%;
-			margin: 0.5rem 0;
+    // Individual testimonial card styling
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 45%;
+      margin: 0.5rem 0;
 
-			// Profile image
-			img {
-				align-self: center;
-				width: 15rem;  // Consistent size for all profile pics
-			}
+      // Profile images - medium size
+      img {
+        align-self: center;
+        width: 15rem;
+      }
 
-			// Quote styling
-			blockquote {
-				color: $text-color;
-				font-style: italic;
-				font-family: $font-family;
-				font-size: 1rem;
-				text-align: center;
-				line-height: 1.7rem;
-				padding: 2rem 4rem;  // Room to breathe
-			}
+      // Quote text - italicized for effect
+      blockquote {
+        color: rgb(117, 116, 116);
+        font-style: italic;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.7rem;
+        padding: 2rem 4rem;
+      }
 
-			// Attribution
-			cite {
-				align-self: center;
-				color: $primary-color;
-				font-family: $font-family;
-				font-size: 1rem;
-				text-align: center;
-				line-height: 1.7rem;
-				padding: 0 4rem;
-				width: 50%
-			}
-		}
-	}
+      // Attribution - aligns center with green color
+      cite {
+        align-self: center;
+        color: rgb(2, 133, 85);
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.7rem;
+        padding: 0 4rem;
+        width: 50%;
+      }
+    }
+  }
 }
 
-/* Divider line before footer */
-.full-width-line {
-	height: 1px;
-	background-color: $primary-color;
-}
-
-/* Footer styling */
+// Footer - simple text and link layout
 .footer {
-	// Text content wrapper
-	.footer-text {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 2rem;
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
 
-		// Legal text
-		p {
-			font-size: 0.8rem;
-			text-align: left;
-			color: $text-color;
-			line-height: 1.0rem;
-		}
+    // Smaller legal text
+    p {
+      font-size: 0.8rem;
+      text-align: left;
+      color: rgb(117, 116, 116);
+      line-height: 1rem;
+    }
 
-		// Footer links container
-		.footer-links {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			width: fit-content;
-			color: black;
-			padding: 1rem 0;
+    // Footer links - laid out in a row
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: fit-content;
+      color: black;
+      padding: 1rem 0;
 
-			// Individual links
-			a {
-				padding: 0.5rem;
-				color: black;
-				font-size: 0.8rem;
-				text-align: left;
-				line-height: 1.7rem;
-			}
-		}
-	}
+      // Link styling
+      a {
+        padding: 0.5rem;
+        color: black;
+        font-size: 0.8rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}
+
+// Media Queries - responsive styling
+@media (min-width: 1920px) {
+  .hero {
+    padding: 2rem 4rem;
+  }
+  .locations {
+    padding: 1rem 4rem;
+  }
+  .advantages {
+    padding: 1rem 4rem;
+  }
+  .header .header-img {
+    max-height: 60rem;
+  }
+  .advantages-grid {
+    max-width: 1900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero {
+    padding: 1rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  .advantages-grid {
+    flex-direction: column;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .advantage-item {
+    width: 100%;
+    margin-bottom: 2rem;
+    &:not(:last-child) {
+      border-bottom: 2px solid rgb(229, 229, 229);
+      padding-bottom: 2rem;
+    }
+  }
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial {
+    max-width: 100%;
+  }
+  .locations p {
+    padding: 1rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero .button-div {
+    width: 80%;
+    margin: 1rem auto;
+    .button {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  }
+  .locations h2 {
+    font-size: 1.4rem;
+  }
+  .testimonial img {
+    width: 10rem;
+  }
+  .testimonial blockquote {
+    padding: 1rem 0;
+  }
+  .testimonial cite {
+    padding: 0;
+    width: 100%;
+  }
+  .hero h1::after,
+  .advantages h2::after {
+    width: 40px;
+  }
 }
