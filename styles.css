@@ -328,6 +328,8 @@ a {
   /* Tighten up spacing */
   .header .logo {
     padding: 1rem;
+    margin: 0 auto;
+    text-align: center; /* Center-aligns content within the logo container */
   }
 
   .hero {
@@ -394,6 +396,11 @@ a {
 /* Even smaller screens need more love */
 @media (max-width: 480px) {
   /* Make button more tappable */
+  .header .logo {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center; /* Center-aligns content within the logo container */
+  }
   .hero .button-div {
     width: 80%;
     margin: 1rem auto;
