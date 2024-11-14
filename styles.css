@@ -1,38 +1,39 @@
 /** @format */
-/* Grab our custom font - using variable weight which is pretty cool */
+/* Let's bring in our fonts - Sora has variable weights, so it's versatile */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
-/* Reset browser defaults - always start clean */
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+
+/* Reset browser defaults - this keeps styles predictable across browsers */
 * {
   margin: 0;
   padding: 0;
   text-indent: 0;
 }
 
-/* Base styles - Sora looks way better than system fonts */
+/* Base font family - Sora just looks a lot nicer than system fonts */
 body {
   font-family: "Sora", sans-serif;
 }
 
-/* Links shouldn't look like links in the nav */
+/* Removing link underline and setting a clean white color */
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
-/* Header layout - stack logo on top of banner image */
+/* Header setup - stacking logo on top of banner image */
 .header {
   display: flex;
   flex-direction: column;
 }
 
-/* Logo needs some breathing room */
+/* Spacing around the logo so it doesn't feel cramped */
 .header .logo {
   margin-top: 2rem;
   padding: 2rem;
 }
 
-/* Keep banner image from getting too tall on big screens */
+/* Banner image sizing - keeping it manageable on larger screens */
 .header .header-img {
   width: 100%;
   height: auto;
@@ -43,7 +44,7 @@ a {
   width: 100%;
 }
 
-/* Hero section - center everything nicely */
+/* Hero section - centering elements for balance */
 .hero {
   display: flex;
   flex-direction: column;
@@ -53,7 +54,7 @@ a {
   align-items: center;
 }
 
-/* Main heading - green to match brand, with a neat underline */
+/* Main heading - green matches our brand, with a little underline effect */
 .hero h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -66,9 +67,9 @@ a {
   padding-bottom: 1rem;
 }
 
-/* Little green line under the h1 - centered with transform */
+/* Adding an underline below h1 - centered nicely */
 .hero h1::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -78,21 +79,21 @@ a {
   background-color: rgb(2, 133, 85);
 }
 
-/* Body text - keeping it readable with gray */
+/* Body text color - keeping it readable with a subtle gray */
 .hero p {
   color: rgb(117, 116, 116);
   font-size: 1rem;
   text-align: left;
 }
 
-/* Wrapper for hero content - flexible height */
+/* Flex wrapper for hero content - adjust height as needed */
 .hero .hero-content {
   display: flex;
   flex-direction: column;
   height: fit-content;
 }
 
-/* Orange CTA button - stands out nicely */
+/* Call-to-action button - making it stand out with an orange background */
 .hero .button-div {
   display: flex;
   align-self: center;
@@ -102,7 +103,7 @@ a {
   margin: 2rem;
 }
 
-/* Button text styling */
+/* Button text styling - larger font for emphasis */
 .hero .button-div .button {
   font-size: 1.5rem;
   font-family: "Sora", sans-serif;
@@ -110,7 +111,7 @@ a {
   font-weight: 300;
 }
 
-/* Advantages section - similar layout to hero */
+/* Advantages section - using similar layout as hero for consistency */
 .advantages {
   display: flex;
   flex-direction: column;
@@ -120,7 +121,7 @@ a {
   align-items: center;
 }
 
-/* Section heading - matches hero style for consistency */
+/* Section heading - same style as hero, for visual harmony */
 .advantages h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -133,9 +134,9 @@ a {
   padding-bottom: 1rem;
 }
 
-/* Same underline treatment as hero */
+/* Same underline effect as hero heading */
 .advantages h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -145,7 +146,7 @@ a {
   background-color: rgb(2, 133, 85);
 }
 
-/* Grid for advantage boxes - wraps on smaller screens */
+/* Grid layout for advantage boxes - responsive wrap on smaller screens */
 .advantages-grid {
   display: flex;
   flex-direction: row;
@@ -156,39 +157,36 @@ a {
   position: relative;
 }
 
-/* Add vertical divider */
+/* Vertical divider in grid */
 .advantages-grid::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   height: 35%;
   width: 2px;
   background-color: rgb(229, 229, 229);
-  transform: translateX(-50%);
-  transform: translateY(20%);
+  transform: translateX(-50%) translateY(20%);
 }
 
 .advantages-grid::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   height: 35%;
   width: 2px;
   background-color: rgb(229, 229, 229);
-  transform: translateX(-50%);
-  transform: translateY(160%);
+  transform: translateX(-50%) translateY(160%);
 }
 
-
-/* Individual advantage box */
+/* Individual advantage item styling */
 .advantage-item {
   width: 45%;
   margin-bottom: 2rem;
 }
 
-/* Box headings - left-aligned for better readability */
+/* Left-aligned headings for better readability */
 .advantage-item h3 {
   text-align: left;
   font-size: 1.7rem;
@@ -200,7 +198,7 @@ a {
   font-weight: 300;
 }
 
-/* Box content - nice line height for readability */
+/* Content inside advantage item with increased line height */
 .advantage-item p {
   color: rgb(117, 116, 116);
   font-size: 1rem;
@@ -208,7 +206,7 @@ a {
   line-height: 1.7rem;
 }
 
-/* Locations section - different style for variety */
+/* Locations section - some variety to separate it visually */
 .locations {
   display: flex;
   flex-direction: column;
@@ -218,7 +216,7 @@ a {
   align-items: center;
 }
 
-/* Green banner heading - full width for impact */
+/* Full-width green banner for section heading */
 .locations h2 {
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
@@ -230,7 +228,7 @@ a {
   background-color: rgb(2, 133, 85);
 }
 
-/* Location text with subtle green background */
+/* Location paragraph with light green background */
 .locations p {
   color: rgb(117, 116, 116);
   background-color: rgba(2, 133, 85, 0.1);
@@ -240,7 +238,7 @@ a {
   padding: 2rem 4rem;
 }
 
-/* Testimonials section - social proof is key */
+/* Testimonials section - centered layout for alignment */
 .testimonials {
   display: flex;
   padding: 2rem;
@@ -249,14 +247,14 @@ a {
   align-items: center;
 }
 
-/* Layout for testimonial cards */
+/* Layout for testimonials grid */
 .testimonials-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-/* Individual testimonial styling */
+/* Individual testimonial setup */
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -265,13 +263,13 @@ a {
   margin: 0.5rem 0;
 }
 
-/* Profile pics - keep them reasonably sized */
+/* Keeping profile pics to a medium size */
 .testimonial img {
   align-self: center;
   width: 15rem;
 }
 
-/* Quote styling - italics for that testimonial feel */
+/* Quote styling - italics for that personal touch */
 .testimonial blockquote {
   color: rgb(117, 116, 116);
   font-style: italic;
@@ -287,15 +285,13 @@ a {
   transform: translateY(-3.5rem) rotate(180deg);
   color: rgba(117, 116, 116, 0.223);
   font-style: italic;
-  font-family: "Sora", sans-serif;
-  font-size: 20rem;
-  text-align: left;
-  line-height: 0rem;
   font-family: "Island Moments", cursive;
+  font-size: 20rem;
+  line-height: 0;
   font-weight: 400;
 }
 
-/* Attribution styling */
+/* Attribution styling - color matched with the brand */
 .testimonial cite {
   align-self: center;
   color: rgb(2, 133, 85);
@@ -307,13 +303,13 @@ a {
   width: 50%;
 }
 
-/* Subtle divider before footer */
+/* Divider before footer section */
 .full-width-line {
   height: 1px;
   background-color: rgb(2, 133, 85);
 }
 
-/* Footer text layout */
+/* Footer text layout - structured as columns */
 .footer .footer-text {
   display: flex;
   flex-direction: column;
@@ -321,7 +317,7 @@ a {
   padding: 2rem;
 }
 
-/* Legal text - small but readable */
+/* Legal text - small but clear */
 .footer .footer-text p {
   font-size: 0.8rem;
   text-align: left;
@@ -329,7 +325,7 @@ a {
   line-height: 1rem;
 }
 
-/* Footer links container */
+/* Footer links area */
 .footer .footer-text .footer-links {
   display: flex;
   flex-direction: row;
@@ -340,7 +336,7 @@ a {
   padding: 1rem 0;
 }
 
-/* Footer link styling */
+/* Footer link styles */
 .footer .footer-text .footer-links a {
   padding: 0.5rem;
   color: black;
@@ -349,6 +345,7 @@ a {
   line-height: 1.7rem;
 }
 
+/* Large screens adjustments */
 @media (min-width: 1920px) {
   .hero {
     padding: 2rem 4rem;
@@ -360,42 +357,37 @@ a {
     padding: 1rem 4rem;
   }
   .header .header-img {
-    width: 100%;
-    height: auto;
     max-height: 60rem;
   }
   .advantages-grid {
     max-width: 1900px;
   }
 }
-/* Mobile styles - things get tricky below 768px */
+
+/* Medium screens - below 768px */
 @media (max-width: 768px) {
-  /* Tighten up spacing */
+  /* Centering logo and adjusting padding */
   .header .logo {
     padding: 1rem;
     margin: 0 auto;
-    text-align: center; /* Center-aligns content within the logo container */
+    text-align: center;
   }
 
+  /* Hero padding and font size adjustments */
   .hero {
     padding: 1rem;
   }
 
-  /* Smaller heading on mobile */
   .hero h1 {
     font-size: 1.5rem;
   }
 
-  /* Stack advantage boxes vertically */
+  /* Stack advantage boxes vertically on smaller screens */
   .advantages-grid {
     flex-direction: column;
   }
 
-  /* Remove vertical divider on mobile */
-  .advantages-grid::before {
-    display: none;
-  }
-
+  .advantages-grid::before,
   .advantages-grid::after {
     display: none;
   }
@@ -405,7 +397,6 @@ a {
     margin-bottom: 2rem;
   }
 
-  /* Add horizontal divider between stacked items on mobile */
   .advantage-item:not(:last-child) {
     border-bottom: 2px solid rgb(229, 229, 229);
     padding-bottom: 2rem;
@@ -421,7 +412,7 @@ a {
     max-width: 100%;
   }
 
-  /* Adjust padding for mobile */
+  /* Adjusting padding for mobile */
   .testimonial blockquote {
     padding: 1rem;
   }
@@ -429,9 +420,8 @@ a {
   .locations p {
     padding: 1rem;
   }
-  
-  /* Fix width for mobile */
-  .locations h2{
+
+  .locations h2 {
     width: 96%;
   }
 
@@ -442,13 +432,13 @@ a {
   }
 }
 
-/* Even smaller screens need more love */
+/* Small screens - below 480px */
 @media (max-width: 480px) {
-  /* Make button more tappable */
+  /* Center-align logo and adjust spacing */
   .header .logo {
     padding: 1rem;
     margin: 0 auto;
-    text-align: center; /* Center-aligns content within the logo container */
+    text-align: center;
   }
   .hero .button-div {
     width: 80%;
@@ -460,12 +450,12 @@ a {
     width: 100%;
   }
 
-  /* Smaller heading text */
+  /* Smaller text for locations heading */
   .locations h2 {
     font-size: 1.4rem;
   }
 
-  /* Smaller profile pics */
+  /* Smaller profile images */
   .testimonial img {
     width: 10rem;
   }
