@@ -152,7 +152,20 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px; /* Keep things readable on wide screens */
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Add vertical divider */
+.advantages-grid::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgb(229, 229, 229);
+  transform: translateX(-50%);
 }
 
 /* Individual advantage box */
@@ -331,9 +344,20 @@ a {
     flex-direction: column;
   }
 
+  /* Remove vertical divider on mobile */
+  .advantages-grid::before {
+    display: none;
+  }
+
   .advantage-item {
     width: 100%;
     margin-bottom: 2rem;
+  }
+
+  /* Add horizontal divider between stacked items on mobile */
+  .advantage-item:not(:last-child) {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding-bottom: 2rem;
   }
 
   /* Stack testimonials vertically */
