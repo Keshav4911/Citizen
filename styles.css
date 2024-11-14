@@ -1,7 +1,7 @@
 /** @format */
 /* Grab our custom font - using variable weight which is pretty cool */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 /* Reset browser defaults - always start clean */
 * {
   margin: 0;
@@ -162,11 +162,25 @@ a {
   position: absolute;
   left: 50%;
   top: 0;
-  height: 100%;
-  width: 1px;
+  height: 35%;
+  width: 2px;
   background-color: rgb(229, 229, 229);
   transform: translateX(-50%);
+  transform: translateY(20%);
 }
+
+.advantages-grid::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 35%;
+  width: 2px;
+  background-color: rgb(229, 229, 229);
+  transform: translateX(-50%);
+  transform: translateY(160%);
+}
+
 
 /* Individual advantage box */
 .advantage-item {
@@ -212,9 +226,8 @@ a {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 200;
-  padding: 0.5rem 0.4rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   background-color: rgb(2, 133, 85);
-  width: 99%;
 }
 
 /* Location text with subtle green background */
@@ -267,6 +280,19 @@ a {
   text-align: center;
   line-height: 1.7rem;
   padding: 2rem 4rem;
+}
+
+.quote {
+  position: absolute;
+  transform: translateY(-3.5rem) rotate(180deg);
+  color: rgba(117, 116, 116, 0.223);
+  font-style: italic;
+  font-family: "Sora", sans-serif;
+  font-size: 20rem;
+  text-align: left;
+  line-height: 0rem;
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
 }
 
 /* Attribution styling */
@@ -323,6 +349,25 @@ a {
   line-height: 1.7rem;
 }
 
+@media (min-width: 1920px) {
+  .hero {
+    padding: 2rem 4rem;
+  }
+  .locations {
+    padding: 1rem 4rem;
+  }
+  .advantages {
+    padding: 1rem 4rem;
+  }
+  .header .header-img {
+    width: 100%;
+    height: auto;
+    max-height: 60rem;
+  }
+  .advantages-grid {
+    max-width: 1900px;
+  }
+}
 /* Mobile styles - things get tricky below 768px */
 @media (max-width: 768px) {
   /* Tighten up spacing */
@@ -351,6 +396,10 @@ a {
     display: none;
   }
 
+  .advantages-grid::after {
+    display: none;
+  }
+
   .advantage-item {
     width: 100%;
     margin-bottom: 2rem;
@@ -358,7 +407,7 @@ a {
 
   /* Add horizontal divider between stacked items on mobile */
   .advantage-item:not(:last-child) {
-    border-bottom: 1px solid rgb(229, 229, 229);
+    border-bottom: 2px solid rgb(229, 229, 229);
     padding-bottom: 2rem;
   }
 
